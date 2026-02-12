@@ -5,6 +5,11 @@ public class  Translation{
         String s = sc.next();
         String t = sc.next();
 
+        if (s.length() != t.length()) {
+            System.out.println("NO");
+            return;
+        }
+
         int i = 0;
         int j = t.length()-1;
         boolean isSame = true;
