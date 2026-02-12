@@ -1,18 +1,34 @@
 import java.util.*;
-public class  SquareString{
-    public static void main(String[] args){
+
+public class SquareString {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String s = sc.next();
-        int n = s.length();
 
-       String s1 = s.substring(0, n/2);
-        String s2 = s.substring(n/2, n);
+        int t = sc.nextInt();   // number of test cases
 
-        if(s1.equals(s2)){
-            System.out.println("YES");
-        }else{
-            System.out.println("NO");
+        while (t-- > 0) {
+            String s = sc.next();
+            int n = s.length();
+
+            if (n % 2 != 0) {
+                System.out.println("NO");
+                continue;
+            }
+
+            boolean isSquare = true;
+
+            for (int i = 0; i < n / 2; i++) {
+                if (s.charAt(i) != s.charAt(i + n / 2)) {
+                    isSquare = false;
+                    break;
+                }
+            }
+
+            if (isSquare) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
         }
-
     }
 }
