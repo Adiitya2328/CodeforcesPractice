@@ -12,11 +12,11 @@ public class SoftDrinks{
         int np = sc.nextInt();
 
         int drink = k*l;
-        int toast = drink/n;
+        int toast = drink/nl;
         int limes = c*d;
         int salt  = p/np;
         int min = Math.min(toast, Math.min(limes , salt));
-        int ans = min/nl;
+        int ans = min/n;
         System.out.println(ans);
     }
 }
